@@ -10,6 +10,7 @@ import Toolbar from "../Button/Toolbar";
 import SearchForm from "../form/SearchForm";
 import SayHello from "../form/SayHello";
 import Counter from "../form/Counter";
+import Tugas from "../Tugas/Tugas";
 import "../Card/Card.css"
 
 createRoot(document.getElementById('root')).render(
@@ -27,6 +28,7 @@ createRoot(document.getElementById('root')).render(
         <SayHello/>
         <Counter/>
         <Counter/>
+        <Tugas/>
      </Container>
     </StrictMode>
 )

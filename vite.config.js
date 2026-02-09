@@ -1,16 +1,19 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import HelloWorld from './src/hello-world/HelloWorld'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import Counter from "./src/form/Counter";
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
   build: {
-    rollupOptions:{
+    rollupOptions: {
       input: {
-        index :"index.html",
-        hello_world : "hello-world.html"
-      }
-    }
-  }
-})
+        main: "index.html",
+        task: "task.html",
+        hello: "hello-world.html",
+        counter: "counter.html",
+        note: "note.html",
+        tugas2: "tugas2.html",
+      },
+    },
+  },
+});

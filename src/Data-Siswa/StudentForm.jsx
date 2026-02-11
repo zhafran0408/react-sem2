@@ -1,6 +1,11 @@
 import { useState } from "react";
+import { useStudentsDispatch } from "./StudentContext";
 
-export default function StudentForm({ onAddStudent }) {
+let nextId = 1;
+
+export default function StudentForm() {
+  const dispatch = useStudentsDispatch();
+
   const [nama, setNama] = useState("");
   const [umur, setUmur] = useState("");
   const [kelas, setKelas] = useState("");
@@ -8,7 +13,15 @@ export default function StudentForm({ onAddStudent }) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    onAddStudent(nama, umur, kelas);
+    dispatch({
+      type: "ADD_STUDENT",
+      student: {
+        id: nextId++,
+        nama,
+        umur,
+        kelas,
+      },
+    });
 
     setNama("");
     setUmur("");
@@ -16,28 +29,28 @@ export default function StudentForm({ onAddStudent }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="form">
+    <form onSubmit={handleSubmit}>
       <input
         placeholder="Nama"
         value={nama}
-        onChange={(e) => setNama(e.target.value)}
-        required
+        onChange={e => setNama(e.target.value)}
       />
       <input
         placeholder="Umur"
         value={umur}
-        onChange={(e) => setUmur(e.target.value)}
-        required
+        onChange={e => setUmur(e.target.value)}
       />
       <input
         placeholder="Kelas"
         value={kelas}
-        onChange={(e) => setKelas(e.target.value)}
-        required
+        onChange={e => setKelas(e.target.value)}
       />
       <button type="submit">Tambah</button>
     </form>
   );
 }
+
+
+
 
 

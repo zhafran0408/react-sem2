@@ -1,10 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import StudentApp from "./StudentApp";
+import ProfileApp from "./ProfileApp";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <StudentApp />
-  </StrictMode>
+    <ProfileApp />
+  </StrictMode>,
 );
-

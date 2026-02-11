@@ -1,39 +1,63 @@
-import { use, useState } from "react";
+import { useContext, useState } from "react";
+import { NotesDispatchContext } from "./NoteContext";
 
-export default function Note({ note, onChange, onDelete }) {
+export default function Note({ note }) {
+  const dispatch = useContext(NotesDispatchContext);
   const [isEditing, setIsEditing] = useState(false);
-  let component;
 
   function handleChangeText(e) {
-    const mewNote = { ...note, text: e.target.value };
-    onChange(mewNote);
+    dispatch({
+      ...note,
+      type: "CHANGE_NOTE",
+      text: e.target.value
+    });
   }
 
+  function handleChangeDone(e) {
+    dispatch({
+      ...note,
+      type: "CHANGE_NOTE",
+      done: e.target.checked
+    });
+  }
+
+  function handleDelete() {
+    dispatch({
+      type: "DELETE_NOTE",
+      id: note.id
+    });
+  }
+
+  let content;
+
   if (isEditing) {
-    component = (
+    content = (
       <>
         <input value={note.text} onChange={handleChangeText} />
         <button onClick={() => setIsEditing(false)}>Save</button>
       </>
     );
   } else {
-    component = (
+    content = (
       <>
         {note.text}
         <button onClick={() => setIsEditing(true)}>Edit</button>
       </>
     );
   }
-  function handleChangeDone(e) {
-    const mewNote = { ...note, done: e.target.checked };
-    onChange(mewNote);
-  }
 
   return (
     <label>
-      <input type="checkbox" checked={note.Done} onChange={handleChangeDone} />
-      {component}
-      <button onClick={() => onDelete(note)}>Delete</button>
+      <input
+        type="checkbox"
+        checked={note.done}
+        onChange={handleChangeDone}
+      />
+      {content}
+      <button onClick={handleDelete}>Delete</button>
     </label>
   );
 }
+
+
+

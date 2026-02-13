@@ -1,53 +1,56 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background: #eef2f7;
-  font-family: Arial, sans-serif;
-  color: #1f2937;
-}
-
-.container {
-  max-width: 720px;
-  margin: auto;
-  padding: 20px;
-}
-
+/* JUDUL */
 h1 {
   text-align: center;
   margin-bottom: 20px;
   font-weight: 600;
+  position: relative;
 }
 
-/* FORM */
+h1::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #2563eb;
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 3px;
+}
+
+/* FORM WRAPPER */
 form {
   display: flex;
   gap: 10px;
   margin-bottom: 25px;
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  border: 1px solid #eef2f7;
 }
 
+/* INPUT */
 form input {
   flex: 1;
-  padding: 11px;
-  border-radius: 10px;
-  border: 1px solid #d1d5db;
+  padding: 11px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
   transition: 0.2s;
 }
 
 form input:focus {
   outline: none;
   border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.08);
 }
 
+/* BUTTON TAMBAH */
 form button {
   padding: 11px 18px;
   background: #2563eb;
   border: none;
   color: white;
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
   transition: 0.2s;
@@ -55,42 +58,30 @@ form button {
 
 form button:hover {
   background: #1d4ed8;
+  transform: translateY(-1px);
 }
 
-/* container list */
-.card-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 20px;
-}
-
-/* card */
+/* CARD */
 .student-card {
   background: white;
   border-radius: 12px;
   padding: 16px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   display: flex;
   flex-direction: column;
   gap: 12px;
+  border: 1px solid #f1f5f9;
   transition: 0.2s;
 }
 
 .student-card:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
-/* info */
-.student-info {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
+/* INFO */
 .student-info h3 {
   font-size: 18px;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
 }
 
 .student-info p {
@@ -98,17 +89,11 @@ form button:hover {
   color: #555;
 }
 
-.student-info span {
-  font-weight: 600;
-  color: #111;
-}
-
-
-/* tombol */
+/* BUTTON ACTION */
 .actions {
   display: flex;
   gap: 10px;
-  margin-top: 6px;
+  margin-top: 8px;
 }
 
 .actions button {
@@ -120,7 +105,6 @@ form button:hover {
   transition: 0.2s;
 }
 
-/* edit */
 .edit-btn {
   background: #f59e0b;
   color: white;
@@ -130,7 +114,6 @@ form button:hover {
   background: #d97706;
 }
 
-/* delete */
 .delete-btn {
   background: #ef4444;
   color: white;
@@ -140,7 +123,6 @@ form button:hover {
   background: #dc2626;
 }
 
-/* save */
 .save-btn {
   background: #10b981;
   color: white;
@@ -150,7 +132,7 @@ form button:hover {
   background: #059669;
 }
 
-/* mode edit */
+/* EDIT AREA */
 .edit-area {
   display: flex;
   flex-direction: column;
@@ -161,48 +143,29 @@ form button:hover {
   padding: 10px;
   border-radius: 8px;
   border: 1px solid #ddd;
-  font-size: 14px;
 }
 
-.edit-area input:focus {
-  outline: none;
-  border-color: #3b82f6;
-}
+/* MOBILE */
 @media (max-width: 500px) {
 
-  .student-card {
-    padding: 12px;
-    border-radius: 10px;
+  form {
+    flex-direction: column;
   }
 
-  .student-info h3 {
-    font-size: 16px;
-    margin-bottom: 4px;
+  form button {
+    width: 100%;
   }
 
-  .student-info p {
-    font-size: 13px;
-    padding: 4px 0;
-  }
-
-  /* tombol lebih kecil */
-  .actions button {
-    padding: 8px;
-    font-size: 14px;
-    border-radius: 8px;
-  }
-
-  /* jarak antar tombol */
   .actions {
-    gap: 8px;
+    flex-direction: column;
   }
 
-  /* input edit juga diperkecil */
-  .edit-area input {
-    padding: 8px;
-    font-size: 14px;
+  .actions button {
+    width: 100%;
   }
 }
+
+
 
 
 

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "Product",
+    "price": 100,
+    "description": "Produk ini cocok untuk penggunaan sehari-hari dan memiliki kualitas yang baik."
+  },
+  {
+    "id": 2,
+    "name": "Product",
+    "price": 200,
+    "description": "Produk dengan fitur tambahan dan daya tahan lebih lama."
+  },
+  {
+    "id": 3,
+    "name": "Product",
+    "price": 300,
+    "description": "Produk premium dengan bahan berkualitas tinggi."
+  },
+  {
+    "id": 4,
+    "name": "Product",
+    "price": 400,
+    "description": "Produk terbaik dengan performa maksimal dan desain modern."
+  }
+]
+

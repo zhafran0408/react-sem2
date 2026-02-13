@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "name": "Matcha Latte",
+    "image": "/images/matchalatte.jpg",
+    "price": "28k",
+    "description": "Minuman matcha creamy, lembut, dan manisnya pas."
+  },
+  {
+    "id": 2,
+    "name": "Matcha Frappe",
+    "image": "/images/matchafrappe.jpg",
+    "price": "32k",
+    "description": "Matcha dingin yang segar dan lembut, cocok diminum saat panas."
+  },
+  {
+    "id": 3,
+    "name": "Matcha Cookies",
+    "image": "/images/matchacookies.jpg",
+    "price": "30k",
+    "description": "Cookies renyah dengan rasa matcha yang harum dan enak."
+  },
+  {
+    "id": 4,
+    "name": "Matcha Ice Cream",
+    "image": "/images/matchaicecream.jpg",
+    "price": "25k",
+    "description": "Es krim matcha yang lembut, dingin, dan menyegarkan."
+  },
+  {
+    "id": 5,
+    "name": "Matcha Cheesecake",
+    "image": "/images/matchacheesecake.jpg",
+    "price": "35k",
+    "description": "Cheesecake lembut dengan rasa matcha yang ringan."
+  },
+  {
+    "id": 6,
+    "name": "Matcha Pancake",
+    "image": "/images/matchapancake.jpg",
+    "price": "33k",
+    "description": "Pancake empuk dengan aroma matcha yang wangi."
+  },
+  {
+    "id": 7,
+    "name": "Matcha Donut",
+    "image": "/images/matchadonut.jpg",
+    "price": "22k",
+    "description": "Donat lembut dengan topping matcha yang manis."
+  },
+  {
+    "id": 8,
+    "name": "Matcha Roll Cake",
+    "image": "/images/matcharollcake.jpg",
+    "price": "30k",
+    "description": "Roll cake lembut dengan krim matcha yang ringan."
+  },
+  {
+    "id": 9,
+    "name": "Matcha Brownies",
+    "image": "/images/matchabrownies.jpg",
+    "price": "27k",
+    "description": "Brownies matcha yang moist dan lembut."
+  },
+  {
+    "id": 10,
+    "name": "Matcha Parfait",
+    "image": "/images/matchaparfait.jpg",
+    "price": "34k",
+    "description": "Parfait manis dan segar dengan rasa matcha."
+  }
+]
+
+
+

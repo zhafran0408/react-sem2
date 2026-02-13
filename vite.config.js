@@ -14,6 +14,10 @@ export default defineConfig({
         note: "note.html",
         tugas2: "tugas2.html",
         profile: "profile.html",
+        timer: "timer.html",
+        guestbook: "guestbook.html",
+        product: "product.html",
+        latihan: "latihaneffect.html"
       },
     },
   },
